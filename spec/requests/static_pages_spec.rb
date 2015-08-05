@@ -9,7 +9,7 @@ describe "Static pages" do
       expect(page).to have_content('Sample App')
     end
 
-    it "shold have the ritht title" do
+    it "shold have the ritht title 'Home'" do
       visit '/static_pages/home'
       expect(page).to have_content('Ruby on Rails Tutorial Sample App | Home')
     end
@@ -21,6 +21,11 @@ describe "Static pages" do
       visit '/static_pages/help'
       expect(page).to have_content('Help')
     end
+    
+    it "shold have the ritht title 'Help'" do
+      visit '/static_pages/help'
+      expect(page).to have_content('Ruby on Rails Tutorial Sample App | Help')
+    end
   end
 
   describe "About page" do
@@ -28,6 +33,11 @@ describe "Static pages" do
     it "shold have the content 'About Us'" do
       visit '/static_pages/about'
       expect(page).to have_content('About Us')
+    end
+
+    it "shold have the ritht title 'About Us'" do
+      visit '/static_pages/about'
+      expect(page).to have_content('Ruby on Rails Tutorial Sample App | About Us')
     end
   end
 end
